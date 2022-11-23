@@ -27,9 +27,17 @@ northern_ireland = {
 united_kingdom.append(northern_ireland)
 print(united_kingdom)
 # 3. Use a loop to print the names of all the countries in the UK.
-for names in united_kingdom:
-  print(f'{names["name"]}')
+for country in united_kingdom:
+  print(country["name"])
 # 4. Use a loop to find the total population of the UK.
-total_population = sum(d['population'] for d in united_kingdom)
+running_total = 0
+for country in united_kingdom:
+  country_pop = country["population"]
+  running_total += country_pop
+#total_population = sum(d['population'] for d in united_kingdom)
+#for pop in country in enumerate(united_kingdom)
+# print anyting
+# print country 
+# enumerate creating items in a list in order  
 
 print(total_population)
